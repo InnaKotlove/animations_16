@@ -19,18 +19,38 @@ class GalleryScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: ListView(
-            children: List.generate(
-              imageUrls!.length,
-              (index) => Card(
-                child: SizedBox(
-                  height: 200,
-                  child: Image.network(imageUrls![index]),
+            children: [
+              Card(
+              child: SizedBox(
+                height: 200,
+                child: Hero(
+                  tag: 'rabbit hero',
+                  child: FadeInImage(
+                    placeholder: AssetImage('images/placeholder.jpeg'),
+                    image: NetworkImage(imageUrls![0]),
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
-      ),
+              Card(
+                child: SizedBox(
+                  height: 200,
+                  child: FadeInImage(
+                    placeholder: AssetImage('images/placeholder.jpeg'),
+                    image: NetworkImage(imageUrls![1]),
+                  ),
+                ),
+              ),
+              Card(
+                child: SizedBox(
+                  height: 200,
+                  child: FadeInImage(
+                    placeholder: AssetImage('images/placeholder.jpeg'),
+                    image: NetworkImage(imageUrls![2]),
+                  ),
+                ),
+              ),
+    ],),),),
     );
   }
 }

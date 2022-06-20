@@ -1,5 +1,8 @@
+import 'package:basic_animations/manual_section.dart';
 import 'package:basic_animations/sections/simple_section.dart';
 import 'package:flutter/material.dart';
+import 'builder_section.dart';
+import 'container_section.dart';
 
 void main() {
   runApp(const HomeScreen());
@@ -25,9 +28,9 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: ListView(
               children: [
-                SimpleSection(imageUrls: characterImages['winnie']),
-                SimpleSection(imageUrls: characterImages['piglet']),
-                SimpleSection(imageUrls: characterImages['rabbit']),
+                ManualSection(imageUrls: characterImages['winnie']),
+                BuilderSection(imageUrls: characterImages['piglet']),
+                ContainerSection(imageUrls: characterImages['rabbit']),
                 SimpleSection(imageUrls: characterImages['eeyore']),
               ],
             ),
@@ -40,7 +43,7 @@ class HomeScreen extends StatelessWidget {
 
 Map<String, List<String>> characterImages = {
   'winnie': [
-    'https://chepetsk.ru/upload/iblock/e91/e910dc68028e4a10d6ba9d5c02febcba.jpg',
+    'https://kartinkin.net/uploads/posts/2022-02/1645483522_1-kartinkin-net-p-kartinki-vinni-pukha-1.jpg',
     'https://i.pinimg.com/474x/6e/c1/d7/6ec1d708429bb0840ac5c9a8fedd3ef4.jpg',
     'https://upload.wikimedia.org/wikipedia/en/1/10/Winniethepooh.png',
   ],
